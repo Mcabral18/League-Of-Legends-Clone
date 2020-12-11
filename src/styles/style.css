@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins';
+    line-height: 1.6;
+}
+
+ul {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+p {
+    font-family: 'Poppins';
+    font-size: 15px;
+}
+
+button {
+    outline: 0;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: orange;
+}
+  /* NavBar */
+
+.navbar-collapse {
+    justify-content: space-around !important;
+}
+
+.nav-item{
+    margin: 0 4rem;
+}
+
+.active {
+    border-bottom: 2px solid #fff;
+}
+
+.navbar-brand img{
+    width: 40px;
+    height: 40px;
+}
+
+.bar_logo{
+    font-size: 2rem;
+}
+
+.brand_logo img{
+    width: 30px;
+    height: 30px;
+    margin-left: 1.4rem;
+}
+
+.brand_logo_small{
+    display: none;
+}
+.small_device {
+    display: none;
+}
+
+@media screen and (max-width: 992px){
+    .bar_logo{
+        display: none;
+    }
+    .btn-info{
+        display: none !important;
+    }
+    /* .navbar-toggler{
+        margin-left: auto;
+    } */
+    .brand_logo {
+       display: none;
+    }
+    .brand_logo_small{
+        margin: 0 auto;
+        display: block;
+    }
+    .brand_logo_small img {
+        width: 100px;
+        height: 50px;
+    }
+    .navbar{
+        padding: 0.5rem 1rem !important;
+    }
+    .small_device {
+        display: block;
+    }
+    .navbar-nav{
+        text-align: center;
+    }
+}
+/* section1*/
+
+.card_rell{
+    position: relative;
+    border: 1px solid #c9c9ce;
+    border-radius: 0 1rem 0 0;
+}
+
+.rell_image{
+    position: inherit;
+    left: -1rem;
+    /* z-index: -1; */
+    margin: 0.7rem 0;
+}
+
+.flow_right {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -5rem;
+    top: 45%;
+}
+
+.rell_desciption {
+    font-family: 'Poppins';
+    font-weight: bold !important;
+    font-style: italic;
+    letter-spacing: 0.7px;
+}
+
+.pb {
+    padding-bottom: 10rem !important;
+}
+
+.slogan_home {
+    top: -80px;
+}
+
+.slogan_1{
+    font-family: 'Dancing+Script';
+    font-weight: bold !important;
+}
+
+.slogan_2{
+    font-family: 'Dancing+Script';
+    font-weight: bold !important;
+    font-style: italic;
+    letter-spacing: 0.7px;
+    font-size: 3rem;
+}
+
+.slogan_3{
+    font-family: 'Dancing+Script';
+    font-weight: bold !important;
+}
+
+/* champion*/
+.card{
+    border: none !important;
+    overflow: hidden !important;
+}
+.card-body {
+    background-color: rgb(6, 28, 37);
+}
+
+.card-text{
+    color: #eeee;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Poppins';
+    transition: all 0.1s ease-in;
+}
+
+.card:hover .card-body{
+    background-color: rgb(30, 135, 177);
+}
+
+.card:hover .card-text {
+    transform: translateX(10px);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 5%;
+    width: 11%;
+    background-color: rgb(255, 255, 255);
+    transform: translate(50%, -50%) rotate(45deg);
+    transition: transform 0.5s ease 0s;
+}
+
+.card:hover::after{
+    transform: translate(100%, -100%) rotate(90deg);
+}
+
+.card-img-top {
+    transition: all 0.5s ease 0s;
+}
+
+.card-img-top img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+    z-index: -10;
+}
+
+.card:hover .card-img-top{
+    transform: scale(1.15);
+}
